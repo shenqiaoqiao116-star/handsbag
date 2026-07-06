@@ -10,36 +10,36 @@
         * {
             margin: 0;
             内边距: 0;
-            盒模型: border-box;
+            box-sizing: border-box;
         }
         body {
-            字体族: 'Helvetica Neue', Arial, 无衬线字体;
-            背景颜色: #FFF0F5; /* 奶油粉 */
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #FFF0F5; /* 奶油粉 */
             /* 均匀分布的波点图案 */
-            背景图像: 径向渐变(#FFB6C1 15%, 透明 16%),
-                              径向渐变(#FFB6C1 15%, 透明 16%);
-            背景大小: 30px 30px;
+            background-image: radial-gradient(#FFB6C1 15%, transparent 16%),
+                              radial-gradient(#FFB6C1 15%, transparent 16%);
+            background-size: 30px 30px;
             background-position: 0 0, 15px 15px;
             color: #4A4A4A;
             padding-bottom: 120px;
         }
 
         /* 可爱花字专用样式 */
-        .炫彩字体 {
+        .fancy-font {
             font-family: 'ZCOOL KuaiLe', cursive, sans-serif;
-            颜色: #FF69B4; /* 梦幻粉红 */
-            文本阴影: 2px 2px 0px #FFF, -2px -2px 0px #FFF, 2px -2px 0px #FFF, -2px 2px 0px #FFF, 3px 3px 5px rgba(0,0,0,0.1);
+            color: #FF69B4; /* 梦幻粉红 */
+            text-shadow: 2px 2px 0px #FFF, -2px -2px 0px #FFF, 2px -2px 0px #FFF, -2px 2px 0px #FFF, 3px 3px 5px rgba(0,0,0,0.1);
         }
 
         /* --- 2. 顶部店名 --- */
         header {
-            文本对齐: 居中;
-            内边距: 50像素 20像素 20像素 20像素;
+            text-align: center;
+            padding: 50px 20px 20px 20px;
         }
-        标题 h1 {
-            字体大小: 2.8rem;
-            下边距: 10px;
-            字间距: 2px;
+        header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
         }
         header p {
             font-size: 1.1rem;
@@ -49,9 +49,9 @@
 
         /* --- 3. 一排两个的错落瀑布流 --- */
         .waterfall-container {
-            最大宽度: 800像素;
-            外边距: 0 自动;
-            内边距: 15像素;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 15px;
             column-count: 2; /* 严格一排两个 */
             column-gap: 15px;
         }
@@ -383,13 +383,13 @@
         function playEffect(element) {
             element.style.transform = "scale(1.08) rotate(-1deg)";
             setTimeout(() => {
-                element.style.transform = "";
+                元素.样式.变换 = "";
             }, 300);
         }
 
         // 盲盒核心魔法逻辑
-        function openBlindBox(element) {
-            const canvas = document.getElementById('blindCanvas');
+        函数 openBlindBox(元素) {
+            常量 画布 = 文档.获取元素ById('blindCanvas');
             如果(canvas.style.opacity === "0") {
                 // 如果已经打开了，再次点击换一张随机图
                 shuffleBlindBox();
@@ -434,6 +434,5 @@
         }
     </脚本>
 
-</正文>
-</html>
-        <!-- 测试 -->
+</body>
+        </html>
